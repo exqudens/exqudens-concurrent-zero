@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'exqudens'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+test {
+    testLogging {
+        events 'passed', 'skipped', 'failed'
+        showStandardStreams = true
+        exceptionFormat = 'full'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: "junit", name: "junit", version: "4.12"
+}
